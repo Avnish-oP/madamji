@@ -100,7 +100,7 @@ export default function ProposalPage() {
                       sochlo, karna hai?
                     </button>
                     <audio autoPlay loop>
-                        <source src="/soft-music.mp3" type="audio/mpeg" />
+                        <source src="/music.mp3" type="audio/mpeg" />
                     </audio>
                 </motion.div>
                 <Image
