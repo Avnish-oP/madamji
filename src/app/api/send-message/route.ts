@@ -5,7 +5,7 @@ import { NextResponse, NextRequest } from "next/server";
 const sendContactMail = async (
   message: string
 )=> {
-  let transporter = nodemailer.createTransport({
+  const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
       user: "kavnish1245@gmail.com",
@@ -29,15 +29,15 @@ const sendContactMail = async (
 
   try {
     await new Promise((resolve, reject) => {
-      transporter.sendMail(mailOptions, (error: any, info: nodemailer.SentMessageInfo) => {
-        if (error) {
-          console.error("Error sending email", error);
-          reject(error);
-        } else {
-          console.log("Email sent: " + info?.response);
-          resolve(info);
-        }
-      });
+    transporter.sendMail(mailOptions, (error: Error | null, info: nodemailer.SentMessageInfo) => {
+      if (error) {
+        console.error("Error sending email", error);
+        reject(error);
+      } else {
+        console.log("Email sent: " + info?.response);
+        resolve(info);
+      }
+    });
     });
     return { success: true, message: `Email sent successfully` };
   } catch (error) {

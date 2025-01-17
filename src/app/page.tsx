@@ -1,6 +1,6 @@
 "use client"
 
-import { JSXElementConstructor, ReactElement, ReactNode, ReactPortal, useState } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 
