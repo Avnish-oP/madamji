@@ -7,7 +7,7 @@ import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import Image from 'next/image';
 import axios from 'axios';
 
-const words = `text`;
+const words = `Pata hai jab phli baar yu dekha to nhi socha tha is pyari bachi ke liye itta sab bhi karunga, but time aur mera pyar yaha tak le hi aya hai but i really want ki tu na aise mere sath hi rhe, to mam kya ap muje yu hi tang karte rehna pasand karte rahoge, chhed ke, gudgudi karke, aur jo bhi apke aage ke experiments baki ho muje na in sabse ne pyar ho gya hai and teri wo smile se pyar ho gya hai, tera har ek touch se pyar ho gya hai, i love you meri cutie 🫰♥️`;
 
 export default function ProposalPage() {
     const [showMessage, setShowMessage] = useState(false);
